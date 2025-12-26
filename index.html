@@ -39,7 +39,7 @@
             max-width: 500px;
         }
 
-        /* --- HEADER & LOGO --- */
+        /* --- HEADER --- */
         .header-container {
             display: flex;
             flex-direction: column;
@@ -49,15 +49,6 @@
             max-width: 600px;
             border-bottom: 2px solid #333;
             padding-bottom: 15px;
-        }
-
-        /* Style untuk gambar logo */
-        .app-logo {
-            width: 250px; /* Saiz logo */
-            max-width: 80%; /* Supaya tak pecah di screen kecik */
-            height: auto;
-            margin-bottom: 10px;
-            display: block;
         }
 
         h1 {
@@ -378,6 +369,17 @@
             align-items: center;
         }
 
+        /* NEW STYLE FOR FOOTER LOGO */
+        .footer-logo {
+            height: 120px; /* Icon size equivalent */
+            width: auto;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .footer-logo:hover {
+            transform: scale(1.1);
+        }
+
         .social-icons a {
             color: #ccc; 
             text-decoration: none;
@@ -499,8 +501,6 @@
 
     <div id="simulatorPage">
         <div class="header-container">
-            <img src="logo.png" alt="Syafiq Cikgu Mata Logo" class="app-logo">
-            
             <h1>Lensometer Simulator</h1>
             <div class="nav-buttons">
                 <button id="btnTrain" class="mode-btn active" onclick="setMode('train')">TRAIN MODE</button>
@@ -581,6 +581,8 @@
         <div class="footer">
             <div class="creator-text">Created by : Syafiq Cikgu Mata 2025 V1</div>
             <div class="social-icons">
+                <img src="logo.png" alt="Logo" class="footer-logo">
+
                 <a href="https://www.linkedin.com/in/syafiqhakimiii/" target="_blank" class="linkedin" title="Connect on LinkedIn">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
