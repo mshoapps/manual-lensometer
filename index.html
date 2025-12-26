@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Lensometer Ultimate - Syafiq Cikgu Mata</title>
+    <title>Lensometer Ultimate - Syafiq Cikgu Mata 2025 V1</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -39,7 +39,7 @@
             max-width: 500px;
         }
 
-        /* --- HEADER --- */
+        /* --- HEADER & LOGO --- */
         .header-container {
             display: flex;
             flex-direction: column;
@@ -49,6 +49,15 @@
             max-width: 600px;
             border-bottom: 2px solid #333;
             padding-bottom: 15px;
+        }
+
+        /* Style untuk gambar logo */
+        .app-logo {
+            width: 250px; /* Saiz logo */
+            max-width: 80%; /* Supaya tak pecah di screen kecik */
+            height: auto;
+            margin-bottom: 10px;
+            display: block;
         }
 
         h1 {
@@ -355,6 +364,13 @@
             padding-bottom: 30px;
         }
 
+        .creator-text {
+            margin-bottom: 15px;
+            color: #888;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
         .social-icons {
             display: flex;
             gap: 20px;
@@ -483,6 +499,8 @@
 
     <div id="simulatorPage">
         <div class="header-container">
+            <img src="logo.png" alt="Syafiq Cikgu Mata Logo" class="app-logo">
+            
             <h1>Lensometer Simulator</h1>
             <div class="nav-buttons">
                 <button id="btnTrain" class="mode-btn active" onclick="setMode('train')">TRAIN MODE</button>
@@ -561,6 +579,7 @@
         </div>
 
         <div class="footer">
+            <div class="creator-text">Created by : Syafiq Cikgu Mata 2025 V1</div>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/syafiqhakimiii/" target="_blank" class="linkedin" title="Connect on LinkedIn">
                     <i class="fab fa-linkedin fa-2x"></i>
@@ -595,7 +614,7 @@
                 <input type="text" name="country" placeholder="e.g. Malaysia" required>
 
                 <label>Profession</label>
-                <input type="text" name="profession" placeholder="e.g. Student, Optician, Lecturer" required>
+                <input type="text" name="profession" placeholder="e.g. Student, Optician, Optometrist, Lecturer" required>
 
                 <label style="text-align:center;">Usability Rating (1 - 5)</label>
                 <div class="rating">
@@ -793,8 +812,7 @@
             powerText.innerText = sign + P.toFixed(2);
             axisText.innerText = A + "°";
             
-            // --- FIX: ROTATE COUNTER-CLOCKWISE (NEGATIVE ANGLE) ---
-            // CSS rotates clockwise by default. To match TABO (70deg = /), we use -70deg.
+            // --- ROTATE COUNTER-CLOCKWISE (NEGATIVE ANGLE) ---
             rotationWrapper.style.transform = `rotate(-${A}deg)`;
 
             let blurV, blurH;
